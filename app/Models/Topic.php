@@ -19,7 +19,7 @@ class Topic extends Model
     public function scopeWithOrder($query,$order){
     	//不同的排序,使用不同的诗句读取逻辑
     	switch($order){
-    		case 'resent':
+    		case 'recent':
     		$query = $this->recent();
     		break;
 
@@ -38,6 +38,8 @@ class Topic extends Model
     	//此时会自动触发框架对数据模型 updated_at时间戳的更新
     	return $query->orderBy('updated_at','desc');
     }
+
+	
 
     public function scopeRecent($query){
     	//按照创建时间排序
