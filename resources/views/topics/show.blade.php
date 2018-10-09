@@ -34,8 +34,9 @@
                 <div class="article-meta text-center">
                     {{ $topic->created_at->diffForHumans() }}
                     .
-                    <span class="glyphincon glyphincon-comment" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-comment" aria-hidden="true"></span>
                     {{ $topic->reply_count }}
+                    
                 </div>
 
                 <div class="topic-body">
