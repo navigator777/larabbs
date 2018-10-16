@@ -22,6 +22,8 @@
 						<hr>
 						<h4><strong>注册于</strong></h4>
 						<p>{{ date($user->created_at) }}</p>
+						<h4><strong>最后活跃于</strong></h4>
+						<p title="{{ $user->last_actived_at }}">{{ $user->last_actived_at->diffForHumans() }}</p>
 					</div>
 				</div>
 			</div>
